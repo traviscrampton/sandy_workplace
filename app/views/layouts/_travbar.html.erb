@@ -24,12 +24,14 @@
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
                 </li>
+
                 <li>
                    <a href="#">Store</a>
                 </li>
+
                 <% if current_user %>
                   <li>
-                    <a href="#">Add Portfolio Item</a>
+                    <%= link_to "Add Portfolio Item", new_project_path %>
                   </li>
                   <li>
                     <%= link_to "Logout", destroy_user_session_path, method: :delete %>
