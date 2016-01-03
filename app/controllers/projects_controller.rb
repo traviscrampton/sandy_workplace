@@ -40,9 +40,12 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project.find(params[:id])
-    @project.destroy
-    redirect_to :index
+    @project = Project.find(params[:id])
+    if @project.destroy
+      redirect_to projects_path
+    else
+      redirect_to @project
+    end
   end
 
   private
