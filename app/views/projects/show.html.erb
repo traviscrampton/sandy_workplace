@@ -1,8 +1,28 @@
 <div class="container">
   <div class="col-md-7 project_form">
+    <div id="bigpic">
+
+
+
+    </div>
+
+    <div class="col-md-12">
+
+      <%= image_tag src="", id:"mainImage" %>
+    </div>
+
     <% @project.photos.each do |photo| %>
-      <%= image_tag photo.pic.url(:large) %>
+      <%= image_tag photo.pic.url(:thumb), class:"tnail" %>
     <% end %>
+
+    <script>
+    $(".tnail").hover(function(){
+      var src = $(this).attr("src");
+      var lrc = src.replace("thumb", "large");
+      $("#mainImage").attr("src",lrc);
+    });
+    </script>
+
   </div>
   <div class="col-md-4">
     <h3><%= @project.title %></h3>

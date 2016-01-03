@@ -13,6 +13,7 @@ gem 'masonry-rails'
 gem 'frontend-generators'
 gem 'jquery-fileupload-rails'
 gem 'turbolinks'
+gem 'owlcarousel-rails', github: 'acrogenesis/owlcarousel-rails', branch: 'OwlCarousel2'
 
 group :development do
   gem 'byebug'

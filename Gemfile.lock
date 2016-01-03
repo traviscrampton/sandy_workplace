@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/acrogenesis/owlcarousel-rails.git
+  revision: 2dd679c61b795fa08003994c74d140c214781141
+  branch: OwlCarousel2
+  specs:
+    owlcarousel-rails (1.1.3.3)
+      jquery-rails
+
+GIT
   remote: git://github.com/thoughtbot/paperclip.git
   revision: 76f825a8b616fabf8bfba433ac3107e1b1a079ae
   specs:
@@ -246,6 +254,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   masonry-rails
+  owlcarousel-rails!
   paperclip!
   pg
   protected_attributes
