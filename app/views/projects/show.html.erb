@@ -1,32 +1,27 @@
-<div class="container">
-  <div class="col-md-7 project_form">
-    <div id="bigpic">
+<div class="container nav_margin">
+  <div class="col-md-12">
 
-
-
-    </div>
-
-    <div class="col-md-12">
-
-      <%= image_tag src="", id:"mainImage" %>
-    </div>
-
+  <div class="col-md-7 big_image_border centered">
+      <%= image_tag @project.photos.first.pic.url(:large), id:"mainImage", width:'600px', height:"450px"; %>
+  </div>
+  <div class="col-md-5 project_description">
+    <h3><%= @project.title %></h3>
+    <p> <%= @project.description %> </p>
+    <%= link_to "Add Photo", new_project_photo_path(@project), id:"linker", class:"btn btn-default", remote:true %>
+  </div>
+</div>
+  <div class="col-md-7 centered">
     <% @project.photos.each do |photo| %>
       <%= image_tag photo.pic.url(:thumb), class:"tnail" %>
     <% end %>
+  </div>
 
     <script>
-    $(".tnail").hover(function(){
-      var src = $(this).attr("src");
-      var lrc = src.replace("thumb", "large");
-      $("#mainImage").attr("src",lrc);
-    });
+      $(".tnail").hover(function(){
+        var src = $(this).attr("src");
+        var lrc = src.replace("thumb", "large");
+        $("#mainImage").attr("src",lrc);
+      });
     </script>
 
-  </div>
-  <div class="col-md-4">
-    <h3><%= @project.title %></h3>
-    <p> <%= @project.description %> </p>
-    <%= link_to "Add Photo", new_project_photo_path(@project), id:"linker", remote:true %>
-  </div>
 </div>
