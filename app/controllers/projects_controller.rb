@@ -5,10 +5,12 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.photos.new
   end
 
   def create
     @project = Project.new(project_params)
+
     if @project.save
       redirect_to @project
     else
@@ -28,7 +30,7 @@ class ProjectsController < ApplicationController
       render :new
     end
   end
-  
+
   def show
     @project = Project.find(params[:id])
   end
@@ -42,7 +44,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description)
+    params.require(:project).permit(:title, :description, photos_attributes: [:pic])
   end
 
 
