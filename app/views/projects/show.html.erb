@@ -20,7 +20,11 @@
 </div>
   <div class="col-md-7 centered">
     <% @project.photos.each do |photo| %>
-      <%= image_tag photo.pic.url(:thumb), class:"tnail" %>
+      <% if current_user %>
+          <%= link_to (image_tag photo.pic.url(:thumb)), project_photo_path(@project, photo), data: {:confirm => "Are You Sure You Want To Delete Sandman?", :method => "delete"} %>
+      <% else %>
+        <%= image_tag photo.pic.url(:thumb), class:"tnail" %>
+      <% end %>
     <% end %>
   </div>
 
@@ -31,5 +35,6 @@
         $("#mainImage").attr("src",lrc);
       });
     </script>
+
 
 </div>

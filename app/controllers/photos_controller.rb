@@ -18,6 +18,14 @@ class PhotosController < ApplicationController
     end
   end
 
+  def destroy
+    @project = Project.find(params[:project_id])
+    @photo = @project.photos.find(params[:id])
+    @photo.destroy
+
+    redirect_to project_path(@project)
+  end
+
 
 
 
