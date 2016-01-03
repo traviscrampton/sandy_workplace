@@ -1,0 +1,12 @@
+
+<div class="col-md-5 project_description" id= "projectile">
+
+  <h2>Portfolio Posting</h2>
+  <%= bootstrap_form_for @project do |f| %>
+    <%= f.text_field :title, label:"Name Of Project" %>
+
+    <%= f.text_area :description, label:"Description Of Project" %>
+
+    <%= f.submit class:"btn btn-primary" %>
+  <% end %>
+</div>
