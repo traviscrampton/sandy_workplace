@@ -1,0 +1,4 @@
+<%= bootstrap_form_for [@project, @photo] do |f| %>
+  <%= f.file_field :pic, label:"Upload A Photo", id:"productimage" %>
+  <%= f.submit class: "btn btn-default" %>
+<% end %>
