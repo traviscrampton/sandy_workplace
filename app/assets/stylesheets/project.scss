@@ -3,11 +3,35 @@
   margin-top: 15%;
 }
 
+.hovercraft:hover{
+  opacity:0.7;
+
+}
+
+.project_banner{
+  height:40rem;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('woodtwerk.jpg') no-repeat center ;
+  background-size: cover;
+  color: white;
+  margin-right: 20%;
+  h1{
+    margin-top: 13%;
+  }
+
+}
+
+.spacing{
+  height: 3rem;
+  background-color:#72655b;
+}
+
 
 
 .nav_margin{
   margin-top: 60px;
-  
+
 }
 
 .centered{

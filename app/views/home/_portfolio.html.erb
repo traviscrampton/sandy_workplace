@@ -2,19 +2,14 @@
   <div class="container-fluid">
       <div class="row no-gutter">
         <% @projects.each do |project| %>
-          <div class="col-lg-4 col-sm-6">
-              <a href="/project" class="portfolio-box">
-                  <%= image_tag project.photos.first.pic.url(:indexsize), class: "img-responsive", alt: "" %>
-                  <div class="portfolio-box-caption">
-                      <div class="portfolio-box-caption-content">
-                          <div class=" text-faded">
-                          </div>
-                          <div class="project-name">
-                             <%= project.title %>
-                          </div>
-                      </div>
+          <div class="col-lg-4 col-sm-6 hovercraft">
+            <%= link_to project_path(project) do %>
+              <%= image_tag project.photos.first.pic.url(:indexsize), class: "img-responsive", alt: "" %>
+              <div class="portfolio-box-caption">
+                  <div class="portfolio-box-caption-content">
                   </div>
-              </a>
+              </div>
+            <% end %>
           </div>
           <% end %>
       </div>
