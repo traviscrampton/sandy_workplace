@@ -1,8 +1,9 @@
-class Project < ActiveRecord::Base
+class Sale < ActiveRecord::Base
 
   validates_presence_of :title
   validates_presence_of :description
   validates_presence_of :material
+  validates_presence_of :dimension
   validates_presence_of :price
 
 

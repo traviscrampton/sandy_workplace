@@ -4,6 +4,7 @@ class CreateSales < ActiveRecord::Migration
       t.column :title, :string
       t.column :description, :text
       t.column :material, :text
+      t.column :dimension, :string
       t.column :price, :integer
       t.timestamps
     end

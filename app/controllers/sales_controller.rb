@@ -52,7 +52,7 @@ class SalesController < ApplicationController
   private
 
   def sale_params
-    params.require(:sale).permit(:title, :description, :material, :price, images_attributes: [:pic])
+    params.require(:sale).permit(:title, :description, :material, :price, :dimension, images_attributes: [:pic])
   end
 
 

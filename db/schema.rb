@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160104061613) do
     t.string   "title"
     t.text     "description"
     t.text     "material"
+    t.string   "dimension"
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
