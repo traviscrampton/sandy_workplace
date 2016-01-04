@@ -3,10 +3,26 @@
   margin-top: 15%;
 }
 
+#mainImage{
+  border-radius:10px;
+}
+
 .hovercraft:hover{
   opacity:0.7;
-
 }
+
+.titles{
+  border-bottom: 1px solid white;
+}
+
+.imagine{
+  border: solid white 2px;
+  margin-top: 5px;
+}
+.tnail{
+  margin-bottom: 5px;
+}
+
 
 .project_banner{
   height:40rem;
@@ -24,7 +40,19 @@
 
 .spacing{
   height: 3rem;
-  background-color:#28726E;
+  background-color:#665830;
+}
+
+.everythang{
+  background-color:#F8F8F8;
+}
+
+.big_image_border{
+  border-left: #28726E 2px solid;
+}
+
+.spacer{
+  margin-left: 20px;
 }
 
 
@@ -38,14 +66,16 @@
   text-align: center;
 }
 
-.big_image_border{
-  border: solid #28726E 2px;
-  background-color:#28726E;
+.big{
+  width: 100px;
+  height: 50px;
 }
 
+
+
 .project_description{
-  background-color: #28726E;
-  height:454px; h3, p{
-    color:white;
+
+  height:538px; h3, p{
+    color:black;
   }
 }
