@@ -17,6 +17,7 @@
 
   <div class="col-md-5 project_description" id="saleLink">
     <div class="centered">
+      <br>
       <h3><%= @sale.title %></h3><hr>
     </div>
       <div class="big_image_border">
@@ -41,11 +42,12 @@
       </div>
     </div>
     </div>
+    <br>
+    <div class="centered">
+      <button class="btn btn-primary btn-xl">Send Inquiry</button>
+    </div>
   </div>
 
-    <div class="centered">
-      <button class="btn btn-primary " name="button">Send Inquiry</button>
-    </div>
     <% if current_user %>
       <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn btn-default", remote:true %>
       <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn btn-default", remote:true %>
