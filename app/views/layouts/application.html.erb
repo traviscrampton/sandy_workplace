@@ -9,7 +9,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render "layouts/travbar" %>
+
+  <% unless current_page? (root_path) %>
+  	<%= render "layouts/naver" %>
+  <% end %>
+
 <%= yield %>
 
 </body>

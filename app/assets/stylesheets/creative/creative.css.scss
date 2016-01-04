@@ -80,7 +80,7 @@ aside {
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    background-color: #fff;
+    background-color: #f8f8f8;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -95,7 +95,7 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #665830;
+    color: #28726E;
 }
 
 .navbar-default .nav > li>a,
@@ -103,7 +103,7 @@ aside {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
-    color: #222;
+    color: #28726E;
 }
 
 .navbar-default .nav > li>a:hover,
@@ -122,25 +122,31 @@ aside {
     background-color: transparent;
 }
 
+
 @media(min-width:768px) {
-    .navbar-default {
+     .jimmy {
         border-color: rgba(255,255,255,.3);
         background-color: transparent;
     }
 
+
+
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+        color: #28726E;
     }
+
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
         color: #665830;
     }
 
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
+
+    .jimmy .nav > li>a,
+    .jimmy .nav>li>a:focus {
         color: rgba(255,255,255,.7);
     }
+
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
