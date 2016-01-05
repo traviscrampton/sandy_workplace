@@ -1,4 +1,87 @@
-  <div class="col-md-12 container everythang">
+  <%= render "layouts/show" %>
+
+  <%= render "layouts/show" %>
+    <div class="col-md-12 container everythang">
+      <div class="col-md-7 centered">
+        <br><br>
+          <%= image_tag @project.photos.first.pic.url(:large), id:"mainPhoto", class:"imagine", width:'600px', height:"450px"; %>
+          <div class="okay">
+            <% @project.photos.each do |photo| %>
+              <% if current_user %>
+                <%= link_to (image_tag photo.pic.url(:thumb)), project_photo_path(@project, photo), data: {:confirm => "Are You Sure You Want To Delete Sandman?", :method => "delete"} %>
+              <% else %>
+                <%= image_tag photo.pic.url(:thumb), class:"tnail imagine" %>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+      <div class="col-md-5 project_description" id="projectLink">
+        <div class="centered">
+          <br>
+          <h3><%= @project.title %></h3><hr>
+        </div>
+          <div class="big_image_border">
+            <% if @project.description.length > 800 %>
+            <div class="spacer">
+              <div class="terst centered">
+                <p> <%=  @project.description.first(800) %>   <button class="btn btn-primary" data-toggle="modal" data-target="#modalYo">Read More</button>  </p>
+              </div>
+            <% else %>
+                <div class="centered">
+                  <p><%= @project.description %> </p>
+                </div>
+            <% end %>
+        </div>
+        </div>
+        <br>
+        <div class="centered">
+          <button class="btn btn-primary btn-xl" id="pictureplace">Send Inquiry</button>
+        </div>
+
+      <% if current_user %>
+      <br>
+        <%= link_to "Add Photo", new_project_photo_path(@project), id:"linker", class:"btn btn-primary", remote:true %>
+        <%= link_to "Edit Description", edit_project_path(@project), class: "btn btn-primary", remote:true %>
+        <%= link_to "Delete Sale", project_path(@project),
+                          data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
+                          :method => "delete"}, class:"btn btn-primary" %>
+                          <br>
+                          <p>Side Note For Da Sandman: Click the thumbnails when you are logged in to delete photos</p>
+      <% end %>
+    </div>
+
+
+  </div>
+      <script>
+        $(".tnail").hover(function(){
+          var src = $(this).attr("src");
+          var lrc = src.replace("thumb", "large");
+          $("#mainPhoto").attr("src",lrc);
+        });
+      </script>
+
+      <div class="modal" id="modalYo">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title centered">Full Description</h3><hr>
+              <div class="modal-body">
+                <p><%= @project.description %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+  <!-- <div class="col-md-12 container everythang">
 
   <div class="col-md-7 centered">
       <%= image_tag @project.photos.first.pic.url(:large), id:"mainPhoto", class:"imagine", width:'600px', height:"450px"; %>
@@ -46,4 +129,4 @@
         var lrc = src.replace("thumb", "large");
         $("#mainPhoto").attr("src",lrc);
       });
-    </script>
+    </script> -->

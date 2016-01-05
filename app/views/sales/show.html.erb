@@ -22,7 +22,7 @@
           <% if @sale.description.length > 500 %>
           <div class="spacer">
             <div class="terst">
-              <p> <%=  @sale.description.first(500) %>[...]  </p>
+              <p> <%=  @sale.description.first(500) %> <button class="btn btn-primary" data-toggle="modal" data-target="#modalGo">Read More</button></p>
             </div>
           <% else %>
               <div class="terst">
@@ -64,3 +64,16 @@
         $("#mainImage").attr("src",lrc);
       });
     </script>
+
+    <div class="modal" id="modalGo">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title centered">Full Description</h3><hr>
+            <div class="modal-body">
+              <p><%= @sale.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
