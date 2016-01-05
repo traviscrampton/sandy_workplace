@@ -1,0 +1,8 @@
+<h1>Contact Us</h1>
+
+
+<ul>
+  <% @contact.attributes.each do |key, value| %>
+    <li><%= key %>: <%= value %></li>
+  <% end %>
+</ul>

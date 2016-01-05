@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="centered">
+    <h2>Come Say Hey Whats Up Hello!</h2>
+  </div>
+  <%= bootstrap_form_for @contact do |c| %>
+    <%= c.text_field :name, label:"Name" %>
+    <%= c.text_field :subject, label:"Subject" %>
+    <%= c.text_field :email, label:"email" %>
+    <%= c.text_area :message, label:"Message" %>
+    <%= c.submit class:"btn btn-primary" %>
+  <% end %>
+</div>
