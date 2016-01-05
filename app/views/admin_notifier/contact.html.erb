@@ -1,8 +1,7 @@
-<h1>Contact Us</h1>
+<h1>Message From <%= @contact.name %> </h1>
 
 
-<ul>
-  <% @contact.attributes.each do |key, value| %>
-    <li><%= key %>: <%= value %></li>
-  <% end %>
-</ul>
+<h3>Name: <%= @contact.name %></h3>
+<h3>Email: <%= @contact.email %></h3>
+<h3>Subject: <%= @contact.subject %></h3>
+<h3>message: </h3> <p><%= @contact.message %></p>

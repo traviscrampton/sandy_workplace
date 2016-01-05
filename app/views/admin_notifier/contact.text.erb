@@ -1,6 +1,7 @@
-Contact Us
+Message From <%= @contact.name %>
 
 
-  <% @contact.attributes.each do |key, value| %>
-    <%= key %>: <%= value %>
-  <% end %>
+Name: <%= @contact.name %>
+Email:<%= @contact.email %>
+Subject:<%= @contact.subject %>
+message:<%= @contact.message %>
