@@ -1,19 +1,10 @@
-
-.project_form {
-  margin-top: 15%;
+.labels p{
+  float: left;
+  font-weight: bold;
+  margin-bottom: -1%;
+  margin-right: 2%;
 }
 
-#mainPhoto{
-  border-radius:10px;
-}
-
-.hovercraft:hover{
-  opacity:0.7;
-}
-
-.titles{
-  border-bottom: 1px solid white;
-}
 
 .imagine{
   border: solid #28726E 2px;
@@ -22,13 +13,9 @@
 .tnail{
   margin-bottom: 5px;
 }
-
-
-.anotherone{
-  display: inline-block;
+.centered{
+  text-align: center;
 }
-
-
 .project_banner{
   height:40rem;
   overflow: hidden;
@@ -42,28 +29,82 @@
   }
 
 }
-
 .spacing{
   height: 3rem;
   background-color:#665830;
-}
-
-.everythang{
-  background-color:#F8F8F8;
-}
-
-.big_image_border{
-  border-left: #28726E 2px solid;
-}
-
-.spacer{
-  margin-left: 20px;
 }
 
 .terst{
   border-bottom: #28726E 2px solid;
   margin-top:2%;
 }
+.big_image_border{
+  border-left: #28726E 2px solid;
+  border-right: #28726E 2px solid;
+}
+
+// responsive Behavior
+@media screen and (max-width: 425px) {
+  .project_description{
+    margin-right: 9%;
+    text-align: center;
+  }
+  .okay {
+  text-align: center;
+  max-width: 50%;
+  margin-left: 10%;
+    img{
+    margin-top:2px;
+    margin-bottom:2px;
+  }
+  }
+}
+
+@media screen and (min-width:1200px) {
+.project_form {
+  margin-top: 15%;
+}
+
+#mainPhoto{
+  border-radius:10px;
+}
+
+.everythang{
+  margin-top: 60px;
+}
+.hovercraft:hover{
+  opacity:0.7;
+}
+
+.titles{
+  border-bottom: 1px solid white;
+}
+
+.okay {
+text-align: center;
+max-width: 600px;
+margin-left: 7%;
+  img{
+  margin-top:2px;
+  margin-bottom:2px;
+}
+}
+
+.anotherone{
+  display: inline-block;
+}
+
+
+
+
+
+
+.spacer{
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
 
 
 
@@ -72,21 +113,18 @@
 
 }
 
-.centered{
-  text-align: center;
-}
 
 .big{
   width: 100px;
   height: 50px;
 }
 
-
-
 .project_description{
   width: 600px;
   height:450px;
+  float: right;
    h3, p{
     color:black;
   }
+}
 }

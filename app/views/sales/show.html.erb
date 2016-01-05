@@ -1,9 +1,9 @@
+<%= render "layouts/show" %>
   <div class="col-md-12 container everythang">
-
-    <div class="col-md-7 centered">
+    <div class="col-md-7 centered george">
       <br><br>
         <%= image_tag @sale.images.first.pic.url(:large), id:"mainImage", class:"imagine", width:'600px', height:"450px"; %>
-        <div class="centered">
+        <div class="okay">
           <% @sale.images.each do |image| %>
             <% if current_user %>
               <%= link_to (image_tag image.pic.url(:thumb)), sale_image_path(@sale, image), data: {:confirm => "Are You Sure You Want To Delete Sandman?", :method => "delete"} %>
@@ -13,51 +13,50 @@
           <% end %>
         </div>
     </div>
-
-
-  <div class="col-md-5 project_description" id="saleLink">
-    <div class="centered">
-      <br>
-      <h3><%= @sale.title %></h3><hr>
-    </div>
-      <div class="big_image_border">
-        <% if @sale.description.length > 500 %>
-        <div class="spacer centered">
-          <p> <%=  @sale.description.first(500) %>[...]  </p>
-        <% else %>
-            <div class="terst">
-              <p><%= @sale.description %> </p>
-            </div>
-        <% end %>
+    <div class="col-md-5 project_description" id="saleLink">
       <div class="centered">
-        <div class="terst">
-          <p><%= @sale.material %><p>
-        </div>
-        <div class="terst">
-          <p><%= @sale.dimension %></p>
-        </div>
-        <div class="terst">
-          <p><%= @sale.price %></p>
-        </div>
+        <br>
+        <h3><%= @sale.title %></h3><hr>
       </div>
-    </div>
-    </div>
-    <br>
-    <div class="centered">
-      <button class="btn btn-primary btn-xl">Send Inquiry</button>
-    </div>
-  </div>
+        <div class="big_image_border">
+          <% if @sale.description.length > 500 %>
+          <div class="spacer">
+            <div class="terst">
+              <p> <%=  @sale.description.first(500) %>[...]  </p>
+            </div>
+          <% else %>
+              <div class="terst">
+                <p><%= @sale.description %> </p>
+              </div>
+          <% end %>
+          <div class="terst">
+            <span class="labels"><p>Materials:</p></span> <p><%= @sale.material %></p>
+          </div>
+          <div class="terst">
+            <span class="labels"><p>Dimensions:</p></span> <p><%= @sale.dimension %></p>
+          </div>
+          <div class="terst">
+            <span class="labels"><p>Price:</p></span> <p><%= number_to_currency(@sale.price) %></p>
+          </div>
+      </div>
+      </div>
+      <br>
+      <div class="centered">
+        <button class="btn btn-primary btn-xl" id="pictureplace">Send Inquiry</button>
+      </div>
 
     <% if current_user %>
-      <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn btn-default", remote:true %>
-      <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn btn-default", remote:true %>
+    <br>
+      <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn btn-primary", remote:true %>
+      <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn btn-primary", remote:true %>
       <%= link_to "Delete Sale", sale_path(@sale),
                         data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
-                        :method => "delete"}, class:"btn btn-default" %>
+                        :method => "delete"}, class:"btn btn-primary" %>
     <% end %>
   </div>
-</div>
 
+
+</div>
     <script>
       $(".tnail").hover(function(){
         var src = $(this).attr("src");
