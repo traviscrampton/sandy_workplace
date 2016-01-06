@@ -1,0 +1,19 @@
+<br><br><br>
+<div class="container">
+  <div class="col-md-5">
+    <div class="centered">
+      <h4>Interested in this product?</h4>
+      <h5>Inquire and I'll get back to you Soon!</h5>
+    </div>
+  </div>
+<div class="col-md-7">
+  <%= bootstrap_form_for [@project, @postquestion] do |f| %>
+
+    <%= f.text_field :name, label:"Name" %>
+    <%= f.text_field :email, label:"Email" %>
+    <%= f.text_area :message, label:"Message" %>
+    <%= f.submit %>
+
+  <% end %>
+</div>
+</div>

@@ -7,6 +7,10 @@ resources :sales do
   resources :salequestions
 end
 
+resources :projects do
+  resources :postquestions
+end
+
 
 
   root 'home#index'

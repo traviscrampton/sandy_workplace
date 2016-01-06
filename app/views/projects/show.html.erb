@@ -1,7 +1,7 @@
   <%= render "layouts/show" %>
 
-  <%= render "layouts/show" %>
     <div class="col-md-12 container everythang">
+      <%= render 'layouts/flash' %>
       <div class="col-md-7 centered">
         <br><br>
           <%= image_tag @project.photos.first.pic.url(:large), id:"mainPhoto", class:"imagine", width:'600px', height:"450px"; %>
@@ -35,7 +35,7 @@
         </div>
         <br>
         <div class="centered">
-          <button class="btn btn-primary btn-xl" id="pictureplace">Send Inquiry</button>
+          <%= link_to "Project Inquire", new_project_postquestion_path(@project), class: "btn btn-primary btn-xl", remote:true %>
         </div>
 
       <% if current_user %>
@@ -52,6 +52,11 @@
 
 
   </div>
+
+  <div class="col-md-12">
+    <div id="contactoform"></div>
+  </div>
+
       <script>
         $(".tnail").hover(function(){
           var src = $(this).attr("src");

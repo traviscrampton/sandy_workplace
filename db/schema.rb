@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160105234720) do
+ActiveRecord::Schema.define(version: 20160106011433) do
 
   create_table "contact_forms", force: :cascade do |t|
     t.string   "name"
@@ -49,6 +49,15 @@ ActiveRecord::Schema.define(version: 20160105234720) do
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "postquestions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.integer  "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "projects", force: :cascade do |t|
