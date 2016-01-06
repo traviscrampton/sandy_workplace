@@ -9,7 +9,8 @@ class SalequestionsController < ApplicationController
     @sale = Sale.find(params[:sale_id])
     @salequestion = @sale.salequestions.new(salequestion_params)
     if @salequestion.save
-      redirect_to root_path
+      flash[:notice] = "Your Inquiry Has Been Sent, Talk To You Soon!"
+      redirect_to sale_path(@sale)
     else
       render :new
     end
