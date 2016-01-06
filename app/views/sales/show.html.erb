@@ -42,9 +42,9 @@
       </div>
       <br>
       <div class="centered">
-        <button class="btn btn-primary btn-xl" id="pictureplace">Send Inquiry</button>
+        <%= link_to "Purchase Inquire", new_sale_salequestion_path(@sale), class: "btn btn-primary btn-xl", remote:true %>
       </div>
-
+      <div id="pictureplace"></div>
     <% if current_user %>
     <br>
       <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn btn-primary", remote:true %>
@@ -54,9 +54,18 @@
                         :method => "delete"}, class:"btn btn-primary" %>
     <% end %>
   </div>
-
-
 </div>
+
+
+<div class="col-md-12">
+  <div id="contactform"></div>
+</div>
+
+
+
+
+
+
     <script>
       $(".tnail").hover(function(){
         var src = $(this).attr("src");
