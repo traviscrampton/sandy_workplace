@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Contact</h2>
+                <h2 class="section-heading">C<span data-toggle="modal" data-target="#modalin">o</span>ntact</h2>
                 <hr class="primary">
                 <p>You Gonna Fuckin Call Me Or What? I Do This Shit ALL DAY, YOU THINK THIS iS A FUCKING GAME?</p>
             </div>
@@ -16,4 +16,17 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" id="modalin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-body">
+              <%= render "users/form" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </section>
