@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 resources :contacts
 
 resources :sales do
-  resources :salequestions
+  resources :salequestions,  only: [:new, :create]
 end
 
 resources :projects do
-  resources :postquestions
+  resources :postquestions, only: [:new, :create]
 end
 
 
@@ -17,11 +17,11 @@ end
   get "home/about"
 
   resources :projects do
-    resources :photos
+    resources :photos, only: [:new, :create, :destroy]
   end
 
   resources :sales do
-    resources :images
+    resources :images, only: [:new, :create, :destroy]
   end
 
 
