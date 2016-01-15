@@ -2,7 +2,6 @@
   <div class="col-md-12 container everythang">
   <%= render 'layouts/flash' %>
     <div class="col-md-7 centered george">
-      <br><br>
         <%= image_tag @sale.images.first.pic.url(:large), id:"mainImage", class:"imagine", width:'600px', height:"450px"; %>
         <div class="okay">
           <% @sale.images.each do |image| %>
@@ -14,49 +13,44 @@
           <% end %>
         </div>
     </div>
-    <div class="col-md-5 project_description" id="saleLink">
+    <div class="col-md-5 borderpatrol" id="saleLink">
       <div class="centered">
         <br>
-        <h3><%= @sale.title %></h3><hr>
+        <h3><%= @sale.title %></h3>
       </div>
-        <div class="big_image_border">
-          <% if @sale.description.length > 500 %>
-          <div class="spacer">
-            <div class="terst">
-              <p> <%=  @sale.description.first(500) %> <button class="btn btn-primary" data-toggle="modal" data-target="#modalGo">Read More</button></p>
+        <div class="projectdescrip">
+
+            <span class="labels"><p>Description:</p></span> <p> <%= @sale.description %> </p>
+          </div>
+            <div class="everyOther">
+              <span class="labels"><p>Materials:</p></span> <p><%= @sale.material %></p>
             </div>
-          <% else %>
-              <div class="terst">
-                <p><%= @sale.description %> </p>
-              </div>
-          <% end %>
-          <div class="terst">
-            <span class="labels"><p>Materials:</p></span> <p><%= @sale.material %></p>
-          </div>
-          <div class="terst">
-            <span class="labels"><p>Dimensions:</p></span> <p><%= @sale.dimension %></p>
-          </div>
-          <div class="terst">
-            <span class="labels"><p>Price:</p></span> <p><%= number_to_currency(@sale.price) %></p>
-          </div>
-      </div>
+            <div class="projectdescrip">
+              <span class="labels"><p>Dimensions:</p></span> <p><%= @sale.dimension %></p>
+            </div>
+            <div class="everyOther">
+              <span class="labels"><p>Price:</p></span> <p><%= number_to_currency(@sale.price) %></p>
+            </div>
+      <br>
+      <div class="centered" id="inquiire">
+        <%= link_to "Request A Quote", new_sale_salequestion_path(@sale), class: "btn button-black", remote:true %>
       </div>
       <br>
-      <div class="centered">
-        <%= link_to "Purchase Inquire", new_sale_salequestion_path(@sale), class: "btn btn-primary btn-xl", remote:true %>
-      </div>
       <div id="pictureplace"></div>
-    <% if current_user %>
-    <br>
-      <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn btn-primary", remote:true %>
-      <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn btn-primary", remote:true %>
-      <%= link_to "Delete Sale", sale_path(@sale),
-                        data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
-                        :method => "delete"}, class:"btn btn-primary" %>
-    <% end %>
   </div>
 </div>
+<div class="col-md-12 centered">
 
+
+<% if current_user %>
+  <br>
+  <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn button-black", remote:true %>
+  <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn button-black", remote:true %>
+  <%= link_to "Delete Sale", sale_path(@sale),
+  data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
+    :method => "delete"}, class:"btn button-black" %>
+    <% end %>
+</div>
 
 <div class="col-md-12">
   <div id="contactform"></div>

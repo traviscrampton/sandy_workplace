@@ -20,7 +20,10 @@
         </div>
         <div class="projectdescrip">
             <p> <strong>Description: </strong>  <%=  @project.description %> <p>
-              <%= link_to "Project Inquire", new_project_postquestion_path(@project), class: "btn btn-primary btn-xl", remote:true %>
+              <div class="centered" id="inquiiire">
+                <%= link_to "Ask About This Project", new_project_postquestion_path(@project), class: "btn button-black btn-xl", remote:true %>
+              </div>
+              <br>
         </div>
       </div>
   </div>
@@ -28,11 +31,11 @@
 
   <% if current_user %>
       <br><br>
-      <%= link_to "Add Photo", new_project_photo_path(@project), id:"linker", class:"btn btn-primary", remote:true %>
-      <%= link_to "Edit Description", edit_project_path(@project), class: "btn btn-primary", remote:true %>
+      <%= link_to "Add Photo", new_project_photo_path(@project), id:"linker", class:"btn button-black", remote:true %>
+      <%= link_to "Edit Description", edit_project_path(@project), class: "btn button-black", remote:true %>
       <%= link_to "Delete Project", project_path(@project),
       data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
-        :method => "delete"}, class:"btn btn-primary" %>
+        :method => "delete"}, class:"btn button-black" %>
         <br>
         <p>Side Note For Da Sandman: Click the thumbnails when you are logged in to delete photos</p>
         <% end %>
@@ -79,7 +82,7 @@
             <% if @project.description.length > 800 %>
             <div class="spacer">
               <div class="terst centered">
-                <p> <%=  @project.description.first(800) %>   <button class="btn btn-primary" data-toggle="modal" data-target="#modalYo">Read More</button>  </p>
+                <p> <%=  @project.description.first(800) %>   <button class="btn button-black" data-toggle="modal" data-target="#modalYo">Read More</button>  </p>
               </div>
             <% else %>
                 <div class="centered">
