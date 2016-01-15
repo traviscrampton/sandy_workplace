@@ -13,7 +13,8 @@ gem 'masonry-rails'
 gem 'frontend-generators'
 gem 'jquery-fileupload-rails'
 gem 'turbolinks'
-gem 'readmorejs-rails'
+gem 'high_voltage', '~> 2.4.0'
+
 
 group :development do
   gem 'byebug'

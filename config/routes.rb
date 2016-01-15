@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-resources :contacts
+
+
+resources :contacts, only: [:new, :create]
 
 resources :sales do
   resources :salequestions,  only: [:new, :create]
@@ -14,7 +16,6 @@ end
 
 
   root 'home#index'
-  get "home/about"
 
   resources :projects do
     resources :photos, only: [:new, :create, :destroy]
