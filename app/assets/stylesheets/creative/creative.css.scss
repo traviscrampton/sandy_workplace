@@ -5,10 +5,20 @@
  */
 
 html,
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+height: 4em;
+}
 body {
     width: 100%;
     height: 100%;
     background-color: #f8f8f8;
+    min-height: 1000px;
 }
 
 
@@ -287,6 +297,7 @@ header .header-content .header-content-inner p {
     -moz-transition: all .35s;
     transition: all .35s;
 }
+
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
     position: absolute;
