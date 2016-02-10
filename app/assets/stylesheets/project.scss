@@ -45,22 +45,58 @@
 .centered{
   text-align: center;
 }
-.project_banner{
+.about_banner{
   height:40rem;
   overflow: hidden;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('woodtwerk.jpg') no-repeat center ;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('woodwedge.jpg') no-repeat center ;
   background-size: cover;
   color: white;
   margin-right: 20%;
   h1{
     margin-top: 13%;
   }
-
+}
+.projects_banner{
+  height:40rem;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('tableview.jpg') no-repeat center ;
+  background-size: cover;
+  color: white;
+  margin-right: 20%;
+  h1{
+    margin-top: 13%;
+  }
+}
+.contact_banner{
+  height:40rem;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('double_table.JPG') no-repeat center ;
+  background-size: cover;
+  color: white;
+  margin-right: 20%;
+  h1{
+    margin-top: 13%;
+  }
+}
+.store_banner{
+  height:40rem;
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('othertableview.JPG') no-repeat center ;
+  background-size: cover;
+  color: white;
+  margin-right: 20%;
+  h1{
+    margin-top: 13%;
+  }
 }
 .spacing{
   height: 3rem;
-  background-color:#665830;
+  background-color:white;
+  border: 1px #28726e solid;
 }
 
 .terst{

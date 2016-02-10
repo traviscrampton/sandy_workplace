@@ -217,7 +217,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
+    color: white;
 }
 
 @media(min-width:768px) {
@@ -461,6 +461,17 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .button-black:hover{
+  background-color: #665830;
+  color: white;
+}
+.button_glow {
+  background-color: #28726E;
+  color: white;
+  border: 1px solid lighten(black, 70%);
+  border-radius: 0px;
+}
+
+.button_glow:hover{
   background-color: #665830;
   color: white;
 }
