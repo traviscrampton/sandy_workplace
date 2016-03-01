@@ -11,16 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301194759) do
-
-  create_table "contact_forms", force: :cascade do |t|
-    t.string   "name"
-    t.string   "subject"
-    t.string   "email"
-    t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20160301213414) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -56,29 +47,11 @@ ActiveRecord::Schema.define(version: 20160301194759) do
 
   add_index "pictures", ["item_id", "item_type"], name: "index_pictures_on_item_id_and_item_type"
 
-  create_table "postquestions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "message"
-    t.integer  "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "salequestions", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "sale_id"
-    t.text     "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "sales", force: :cascade do |t|
