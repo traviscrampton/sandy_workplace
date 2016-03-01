@@ -11,6 +11,5 @@ class Sale < ActiveRecord::Base
   has_many :salequestions
 
 
-  has_many :images, dependent: :destroy
   accepts_nested_attributes_for :pictures
 end
