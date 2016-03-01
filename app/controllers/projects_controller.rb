@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+  before_action :are_you_sandy, except: [:index, :show]
+
 
   def index
     @projects = Project.all
@@ -55,5 +57,10 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:title, :description, pictures_attributes: [:pic])
   end
 
+  def are_you_sandy
+    if !current_user || !current_user.admin?
+      redirect_to root_path
+    end
+  end
 
 end
