@@ -1,0 +1,4 @@
+<%= bootstrap_form_for [@item, @picture], authenticity_token: true, remote:true do |f| %>
+  <%= f.file_field :pic, label:"Upload A Photo", id:"productimage"  %>
+  <%= f.submit class: "btn btn-default" %>
+<% end %>

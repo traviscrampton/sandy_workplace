@@ -2,18 +2,18 @@
   <div class="col-md-12 container everythang">
   <%= render 'layouts/flash' %>
     <div class="col-md-7 centered george">
-        <%= image_tag @sale.images.first.pic.url(:large), id:"mainImage", class:"imagine", width:'600px', height:"450px"; %>
+        <%= image_tag @sale.pictures.first.pic.url(:large), id:"mainImage", class:"imagine", width:'600px', height:"450px"; %>
         <div class="okay">
-          <% @sale.images.each do |image| %>
+          <% @sale.pictures.each do |picture| %>
             <% if current_user %>
-              <%= link_to (image_tag image.pic.url(:thumb)), sale_image_path(@sale, image), data: {:confirm => "Are You Sure You Want To Delete Sandman?", :method => "delete"} %>
+              <%= link_to (image_tag picture.pic.url(:thumb)), sale_picture_path(@sale, picture), data: {:confirm => "Are You Sure You Want To Delete Sandman?", :method => "delete"} %>
             <% else %>
-              <%= image_tag image.pic.url(:thumb), class:"tnail imagine" %>
+              <%= image_tag picture.pic.url(:thumb), class:"tnail imagine" %>
             <% end %>
           <% end %>
         </div>
     </div>
-    <div class="col-md-5 borderpatrol" id="saleLink">
+    <div class="col-md-5 borderpatrol" id="projectLink">
       <div class="centered">
         <br>
         <h3><%= @sale.title %></h3>
@@ -44,7 +44,7 @@
 
 <% if current_user %>
   <br>
-  <%= link_to "Add Photo", new_sale_image_path(@sale), id:"sinker", class:"btn button-black", remote:true %>
+  <%= link_to "Add Photo", new_sale_picture_path(@sale), id:"sinker", class:"btn button-black", remote:true %>
   <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn button-black", remote:true %>
   <%= link_to "Delete Sale", sale_path(@sale),
   data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229234750) do
+ActiveRecord::Schema.define(version: 20160301175808) do
 
   create_table "contact_forms", force: :cascade do |t|
     t.string   "name"
@@ -50,6 +50,19 @@ ActiveRecord::Schema.define(version: 20160229234750) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "pictures", force: :cascade do |t|
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+    t.integer  "item_id"
+    t.string   "item_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pictures", ["item_id", "item_type"], name: "index_pictures_on_item_id_and_item_type"
 
   create_table "postquestions", force: :cascade do |t|
     t.string   "name"

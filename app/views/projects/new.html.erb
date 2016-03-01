@@ -7,7 +7,7 @@
 
     <%= f.text_area :description, label:"Description Of Project" %>
 
-    <%= f.fields_for :photos do |p| %>
+    <%= f.fields_for :pictures do |p| %>
       <%= p.file_field :pic, label:"Upload First Image Sandy!"%>
     <% end %>
 

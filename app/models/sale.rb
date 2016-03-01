@@ -6,9 +6,11 @@ class Sale < ActiveRecord::Base
   validates_presence_of :dimension
   validates_presence_of :price
 
+  has_many :pictures, as: :item
+
   has_many :salequestions
 
 
   has_many :images, dependent: :destroy
-  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :pictures
 end

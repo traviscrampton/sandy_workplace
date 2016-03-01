@@ -1,5 +1,4 @@
 class ProjectsController < ApplicationController
-  before_action :are_you_sandy, except: [:index, :show]
 
 
   def index
@@ -8,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @project.photos.new
+    @project.pictures.new
   end
 
   def create
@@ -54,7 +53,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, photos_attributes: [:pic])
+    params.require(:project).permit(:title, :description, pictures_attributes: [:pic])
   end
 
 

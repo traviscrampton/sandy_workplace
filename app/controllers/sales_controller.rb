@@ -8,7 +8,7 @@ class SalesController < ApplicationController
 
   def new
     @sale = Sale.new
-    @sale.images.new
+    @sale.pictures.new
   end
 
   def create
@@ -54,7 +54,7 @@ class SalesController < ApplicationController
   private
 
   def sale_params
-    params.require(:sale).permit(:title, :description, :material, :price, :dimension, images_attributes: [:pic])
+    params.require(:sale).permit(:title, :description, :material, :price, :dimension, pictures_attributes: [:pic])
   end
 
   def are_you_sandy

@@ -18,11 +18,11 @@ end
   root 'home#index'
 
   resources :projects do
-    resources :photos, only: [:new, :create, :destroy]
+    resources :pictures, only: [:new, :create, :destroy]
   end
 
   resources :sales do
-    resources :images, only: [:new, :create, :destroy]
+    resources :pictures, only: [:new, :create, :destroy]
   end
 
 
