@@ -108,6 +108,12 @@
   border-right: #28726E 2px solid;
 }
 
+#otherNav{
+  a.navbar-brand{
+    color: #665830;
+  }
+}
+
 // responsive Behavior
 @media screen and (max-width: 425px) {
   .project_description{

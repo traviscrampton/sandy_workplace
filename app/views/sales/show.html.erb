@@ -43,13 +43,18 @@
 
 
 <% if current_user %>
-  <br>
-  <%= link_to "Add Photo", new_sale_picture_path(@sale), id:"sinker", class:"btn button-black", remote:true %>
-  <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn button-black", remote:true %>
-  <%= link_to "Delete Sale", sale_path(@sale),
-  data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
-    :method => "delete"}, class:"btn button-black" %>
-    <% end %>
+  <% if current_user.admin? %>
+    <br>
+    <%= link_to "Add Photo", new_sale_picture_path(@sale), id:"sinker", class:"btn button-black", remote:true %>
+    <%= link_to "Edit Description", edit_sale_path(@sale), class: "btn button-black", remote:true %>
+    <%= link_to "Delete Sale", sale_path(@sale),
+    data:{:confirm => "Are You Sure Sandman? This Is Gonna Delete All Images Associated With This Project!",
+      :method => "delete"}, class:"btn button-black" %>
+      <br>
+      <p>Side Note For Da Sandman: Click the thumbnails when you are logged in to delete pictures</p>
+  <% end %>
+<% end %>
+
 </div>
 
 <div class="col-md-12">

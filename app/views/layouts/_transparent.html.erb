@@ -30,15 +30,17 @@
                 </li>
 
                 <% if current_user %>
-                  <li>
-                    <%= link_to "Add Portfolio Item", new_project_path %>
-                  </li>
-                  <li>
-                    <%= link_to "Add Sale Item", new_sale_path %>
-                  </li>
-                  <li>
-                    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-                  </li>
+                  <% if current_user.admin? %>
+                    <li>
+                      <%= link_to "Add Portfolio Item", new_project_path %>
+                    </li>
+                    <li>
+                      <%= link_to "Add Sale Item", new_sale_path %>
+                    </li>
+                    <li>
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                    </li>
+                  <% end %>
                 <% end %>
 
             </ul>

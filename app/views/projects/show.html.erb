@@ -32,6 +32,7 @@
   <div class="col-md-12 centered">
 
   <% if current_user %>
+    <% if current_user.admin? %>
       <br><br>
       <%= link_to "Add Photo", new_project_picture_path(@project), id:"linker", class:"btn button-black", remote:true %>
       <%= link_to "Edit Description", edit_project_path(@project), class: "btn button-black", remote:true %>
@@ -40,7 +41,8 @@
         :method => "delete"}, class:"btn button-black" %>
         <br>
         <p>Side Note For Da Sandman: Click the thumbnails when you are logged in to delete pictures</p>
-        <% end %>
+    <% end %>  
+  <% end %>
   </div>
 
   <div class="col-md-12 formfo">
