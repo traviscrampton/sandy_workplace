@@ -39,7 +39,6 @@ class SalesController < ApplicationController
 
   def show
     @sale = Sale.find(params[:id])
-    @slides = @sale.images.length
   end
 
   def destroy

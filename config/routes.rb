@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 resources :contacts, only: [:new, :create]
 
 resources :sales do
-  resources :salequestions,  only: [:new, :create]
+  resources :itemquestions,  only: [:new, :create]
 end
 
 resources :projects do
-  resources :postquestions, only: [:new, :create]
+  resources :itemquestions, only: [:new, :create]
 end
 
 

@@ -41,11 +41,11 @@ Rails.application.configure do
       address:              'smtp.gmail.com',
       port:                 587,
       domain:               'localhost:3000',
-      user_name:            'huasnawood@gmail.com',
+      :user_name =>            'huasnawood@gmail.com',
       password:             'entersandman',
       authentication:       'plain',
       enable_starttls_auto: true,
-       openssl_verify_mode:   'none'
+     openssl_verify_mode:   'none'
     }
 
   # Raises error for missing translations

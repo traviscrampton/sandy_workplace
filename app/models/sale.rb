@@ -8,7 +8,7 @@ class Sale < ActiveRecord::Base
 
   has_many :pictures, as: :item
 
-  has_many :salequestions
+  has_many :itemquestions, as: :item
 
 
   accepts_nested_attributes_for :pictures
