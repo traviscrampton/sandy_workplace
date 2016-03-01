@@ -9,20 +9,21 @@
 <div class="spacing"></div>
 <div class="col-md-5">
   <div class="centered">
-    <h3>Feel Free To Reach Out!</h3>
-    <h5>When I'm not working Out in the field i'm checking emails</h5>
-    <h5>Other Filler Text for da sandman</h5>
+    <br>
+    <%= image_tag("saw_better.jpg", :alt => "rss feed", id:"contact_sandy") %>
   </div>
 </div>
-<div class="container col-md-7">
+<div class="container col-md-7" id="centerbtn">
   <div class="centered">
-    <h2>Come Say Hey Whats Up Hello!</h2>
+    <h3>When I'm Not Building, I'm Checking Emails</h3><hr>
   </div>
   <%= bootstrap_form_for @contact do |c| %>
     <%= c.text_field :name, label:"Name" %>
     <%= c.text_field :subject, label:"Subject" %>
     <%= c.text_field :email, label:"email" %>
-    <%= c.text_area :message, label:"Message" %>
-    <%= c.submit class:"btn button-black" %>
+    <%= c.text_area :message, label:"Message", rows:5 %>
+    <div class="buttonz">
+      <%= c.submit "Contact", class:"btn button-black btn-xl" %>
+    </div>
   <% end %>
 </div>

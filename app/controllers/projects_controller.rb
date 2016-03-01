@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   before_action :are_you_sandy, except: [:index, :show]
+  before_action :find_project, except: [:new, :create, :index]
 
 
   def index
@@ -23,11 +24,9 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = Project.find(params[:id])
   end
 
   def update
-    @project = Project.find(params[:id])
     if @project.update(project_params)
       respond_to do |format|
         format.html {redirect_to @project}
@@ -39,11 +38,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+
   end
 
   def destroy
-    @project = Project.find(params[:id])
     if @project.destroy
       redirect_to projects_path
     else
@@ -61,6 +59,10 @@ class ProjectsController < ApplicationController
     if !current_user || !current_user.admin?
       redirect_to root_path
     end
+  end
+
+  def find_project
+    @project = Project.find(params[:id])
   end
 
 end

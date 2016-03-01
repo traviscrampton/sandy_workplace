@@ -1,6 +1,8 @@
 class SalesController < ApplicationController
 
   before_action :are_you_sandy, except: [:index, :show]
+  before_action :find_sale, except: [:new, :create, :index]
+
 
   def index
     @sales = Sale.all
@@ -22,11 +24,10 @@ class SalesController < ApplicationController
   end
 
   def edit
-    @sale = Sale.find(params[:id])
+
   end
 
   def update
-    @sale = Sale.find(params[:id])
     if @sale.update(sale_params)
       respond_to do |format|
         format.html {redirect_to @sale}
@@ -38,11 +39,10 @@ class SalesController < ApplicationController
   end
 
   def show
-    @sale = Sale.find(params[:id])
+
   end
 
   def destroy
-    @sale = Sale.find(params[:id])
     if @sale.destroy
       redirect_to sales_path
     else
@@ -60,6 +60,10 @@ class SalesController < ApplicationController
     if !current_user || !current_user.admin?
       redirect_to root_path
     end
+  end
+
+  def find_sale
+    @sale = Sale.find(params[:id])
   end
 
 
