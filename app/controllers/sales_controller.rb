@@ -1,5 +1,7 @@
 class SalesController < ApplicationController
 
+  before_action :are_you_sandy, except: [:index, :show]
+
   def index
     @sales = Sale.all
   end
@@ -53,6 +55,12 @@ class SalesController < ApplicationController
 
   def sale_params
     params.require(:sale).permit(:title, :description, :material, :price, :dimension, images_attributes: [:pic])
+  end
+
+  def are_you_sandy
+    if !current_user || !current_user.admin?
+      redirect_to root_path
+    end
   end
 
 

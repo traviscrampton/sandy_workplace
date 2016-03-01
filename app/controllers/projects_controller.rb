@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :are_you_sandy, except: [:index, :show]
 
 
   def index
