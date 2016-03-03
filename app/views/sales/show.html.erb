@@ -1,4 +1,6 @@
 <%= render "layouts/show" %>
+<div class="BigMargin">
+
   <div class="col-md-12 container everythang">
   <%= render 'layouts/flash' %>
     <div class="col-md-7 centered george">
@@ -33,7 +35,7 @@
             </div>
       <br>
       <div class="centered" id="inquiire">
-        <%= link_to "Request A Quote", new_sale_itemquestion_path(@sale), class: "btn button-black", id:"inquiiire", remote:true %>
+        <%= link_to "Inquire", new_sale_itemquestion_path(@sale), class: "btn button-black", id:"inquiiire", remote:true %>
       </div>
       <br>
       <div id="pictureplace"></div>
@@ -86,3 +88,7 @@
         </div>
       </div>
     </div>
+
+
+
+  </div>

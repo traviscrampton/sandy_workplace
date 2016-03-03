@@ -8,7 +8,7 @@ class AdminNotifier < ApplicationMailer
   def contact contact
     @contact = contact
 
-    mail to: "crampton.travis@gmail.com"
+    mail to: "huasnawood@gmail.com"
   end
 
 

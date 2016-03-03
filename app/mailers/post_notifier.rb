@@ -10,7 +10,7 @@ class PostNotifier < ApplicationMailer
     @itemquestion = itemquestion
 
 
-    mail to: "crampton.travis@gmail.com"
+    mail to: "huasnawood@gmail.com"
   end
 
 

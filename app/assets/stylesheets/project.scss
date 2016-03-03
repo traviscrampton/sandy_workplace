@@ -87,7 +87,7 @@
   height:40rem;
   overflow: hidden;
   width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('othertableview.JPG') no-repeat center ;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url('triple_table.JPG') no-repeat center ;
   background-size: cover;
   color: white;
   margin-right: 20%;
@@ -126,9 +126,11 @@
   text-align: center;
 }
 footer{
-  margin-top: 120px;
   margin-bottom: 10px;
   text-align: center;
+}
+.BigMargin{
+  min-height: 700px;
 }
 
 .allTogether{
