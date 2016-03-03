@@ -67,13 +67,13 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
-  config.action_mailer.default_url_options = { :host => "huasnawood.com" }
+  config.action_mailer.default_url_options = { :host => "www.huasnawood.com" }
 
   config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
-      port:                 587,
-      domain:               'huasnawood.com',
+      port:                 '587',
+      domain:               'www.huasnawood.com',
       user_name:            'travisappdomain@gmail.com',
       password:             'entersandman',
       authentication:       'plain',
