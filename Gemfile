@@ -14,6 +14,7 @@ gem 'frontend-generators'
 gem 'jquery-fileupload-rails'
 gem 'turbolinks'
 gem 'high_voltage', '~> 2.4.0'
+gem 'aws-sdk'
 
 
 group :development do
