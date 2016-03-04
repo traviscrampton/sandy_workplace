@@ -240,7 +240,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (< 2.0)
+  aws-sdk
   bootstrap_form
   byebug
   capybara
