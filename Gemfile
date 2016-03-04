@@ -7,15 +7,14 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'sass-rails', '>= 3.2'
 gem 'devise'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', '~> 4.2.1'
 gem 'bootstrap_form'
 gem 'masonry-rails'
 gem 'frontend-generators'
 gem 'jquery-fileupload-rails'
 gem 'turbolinks'
 gem 'high_voltage', '~> 2.4.0'
-gem 'aws-sdk'
-
+gem 'aws-sdk', '< 2.0'
 
 group :development do
   gem 'byebug'
